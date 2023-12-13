@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.titulo{
+    color: #54c20a;
+    margin-left:40vw;
+    margin-top: 10vw;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+
+.box-botao{
+    margin-left: 40vw;
+   margin-top: 40vh;
+   font-family: 'geologica', sans-serif;
+}
+
+.botao-verde:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.botao-verde:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px #54c20a;
+}
+
+.botao-verde:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px #54c20a;
+}
+
+.botao-verde{
+    background-color: #111;
+    color: #54c20a;
+}
+
+.botao-verde::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.botao-verde::after {
+    background-color: #54c20a;
+}
+
+.botao-verde:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.botao-verde-animated {
+    animation: moveinbotton 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveinbotton {
+    0% {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+}
